@@ -1,16 +1,30 @@
-export const App = () => {
+import {FeedbackOptions} from './FeedbackOptions/FeedbackOptions'
+import {Statistics} from './Statistics/Statistics'
+import React, { Component } from 'react';
+import feedbackName from '../feedback.json'
+
+
+export class Feedback extends Component {
+  state = {
+    initialFeedback: feedbackName,
+    }
+
+
+render() {
+ 
+
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
-};
+    <Feedback/>
+    <Statistics title="Statistics"good={} neutral={} bad={} total={} positivePercentage={}></Statistics>
+    <FeedbackOptions options={} onLeaveFeedback={} 
+  )
+}
+}
+
+
+
+
+// <h2>Statistics</h2>
+// <ul>
+//   <li>Good: {} </li>
+// </ul>

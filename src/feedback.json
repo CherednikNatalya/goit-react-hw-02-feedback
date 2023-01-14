@@ -1,0 +1,6 @@
+[
+  { "id": "id-1", "label": "good", "percentage": 0 },
+  { "id": "id-2", "label": "neutral", "percentage": 0 },
+  { "id": "id-3", "label": "bad", "percentage": 0 }
+  
+]
