@@ -1,29 +1,25 @@
-
-// import css from './Feedback.module.css'
+import { List, Button} from './FeedbackOptions.styled'
 import PropTypes from 'prop-types';
 
-export const FeedbackOptions =({initialFeedback}) => {
+export const FeedbackOptions =({options, onLeaveFeedback}) => {
   return (
-    <div>
-    <h1>Please leave feedback</h1>
-   <ul>
-    {initialFeedback.map(({label})=>(
-      <li key={label}>
-       <button
+   <List>
+    {options.map(({id, title})=>(
+      <li key={id}>
+       <Button
        type="button"
-     //   className="Dropdown__toggle"
-     //   onClick={this.toggle}
-     >{label}</button>
+      onClick={onLeaveFeedback}
+     >{title}</Button>
       </li>
     )
     )}
-   </ul>
-</div>
+   </List>
   )
 }
 
 FeedbackOptions.propTypes ={
-  label : PropTypes.string.isRequired
+  options : PropTypes.array.isRequired,
+  onLeaveFeedback : PropTypes.string,
 }
 
 
