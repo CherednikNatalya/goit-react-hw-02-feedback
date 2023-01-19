@@ -10,17 +10,17 @@ export const List = styled.ul`
 export const Button = styled.button`
 	display: inline-block;
 	padding: 5px 15px;
-	background-color: var(--lightGray);
+	background-color: #d2caca;
 	border-radius: 5px;
 
 	@media (any-hover: hover){
 	transition: all var(--anim);
 		&:hover{
 			color: #fff;
-			background-color: var(--gray);
+			background-color: #2b2929;
 		}
 	}
 	&:active {
-			background-color: var(--accent);
+			background-color: #4a4848;
 		}
 `;
